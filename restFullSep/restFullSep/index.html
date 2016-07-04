@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script type="text/javascript" src="Scripts/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+    <div ng-controller="controller1">
+        <table>
+            <tr><th>Identificador</th><th>Lenguaje</th></tr>
+            <tr ng-repeat="proyecto in listaProyectos">
+                <td>{{proyecto.nombre}}</td>
+                <td>{{proyecto.lenguaje}}</td>
+                <td><input type="button" value="ver detalle" ng-click="verDetalle(proyecto)" /></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
