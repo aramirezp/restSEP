@@ -1,13 +1,24 @@
 ﻿<!DOCTYPE html>
-<html>
+<html ng-app="vsAngular">
 <head>
     <title></title>
 	<meta charset="utf-8" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <script type="text/javascript" src="Scripts/angular.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
 </head>
-<body ng-app="vsAngular">
-    <div ng-controller="Controlador1">
+<body>
+    <div ng-controller="Controlador1" class="container">
+        <div class="row">
+            <div class="panel panel-success col-md-4" ng-repeat="image in images">
+                <div class="panel-title">{{image.tittle}}</div>
+                <div class="panel-body">
+                    <img ng-src="{{image.url}}" height="200" />
+                </div>
+            </div>
+        </div>
+            
+        
         <table>
             <tr><th>Identificador</th><th>Lenguaje</th></tr>
             <tr ng-repeat="proyecto in listaProyectos">
