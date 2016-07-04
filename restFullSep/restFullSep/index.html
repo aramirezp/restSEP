@@ -6,8 +6,8 @@
     <script type="text/javascript" src="Scripts/angular.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
 </head>
-<body>
-    <div ng-controller="controller1">
+<body ng-app="vsAngular">
+    <div ng-controller="Controlador1">
         <table>
             <tr><th>Identificador</th><th>Lenguaje</th></tr>
             <tr ng-repeat="proyecto in listaProyectos">
@@ -16,6 +16,12 @@
                 <td><input type="button" value="ver detalle" ng-click="verDetalle(proyecto)" /></td>
             </tr>
         </table>
+        <div ng-show="proyectoDetalle!=null">
+            <p>Nombre:{{proyectoDetalle.nombre}}</p>
+            <p>Lenguaje:{{proyectoDetalle.lenguaje}}</p>
+            <p>Tipo:{{proyectoDetalle.tipo}}</p>
+            <p>Horas:{{proyectoDetalle.horas}}</p>
+        </div>
     </div>
 </body>
 </html>
